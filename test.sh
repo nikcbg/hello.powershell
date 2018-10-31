@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-out=$(bash ./hello.ps1)
+out=$(powershell ./hello.ps1)
 
 # we should check out == hello
 if [ "${out}" == "hello" ];then
