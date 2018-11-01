@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env powershell
 
 out=$(powershell ./hello.ps1)
 
