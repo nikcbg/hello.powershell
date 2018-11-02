@@ -1,6 +1,8 @@
 language: generic
 dist: xenial
 sudo: required
+script:
+- bash test.sh
 
 install:
 # Install PowerShell
@@ -8,8 +10,3 @@ sudo apt-get install -y powershell
 
 # Start PowerShell
 pwsh
-
-script:
-- bash test.sh
-
-
