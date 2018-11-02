@@ -2,4 +2,15 @@ language: generic
 dist: xenial
 sudo: required
 script:
+install:
+  - pwsh -f "${env:TRAVIS_BUILD_DIR}/install-dependencies.ps1"
+
+before_script:
+  - pwsh -f "${env:TRAVIS_BUILD_DIR}/build.ps1"
+
+script:
+  - pwsh -f "${env:TRAVIS_BUILD_DIR}/test.ps1"
+
+after_success:
+  - pwsh -f "${env:TRAVIS_BUILD_DIR}/deploy.ps1"
 - bash test.sh
