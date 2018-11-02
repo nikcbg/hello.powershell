@@ -4,7 +4,6 @@ sudo: required
 
 install:
 sudo apt-get install -y powershell
-pwsh
 
 script:
 - bash test.sh
